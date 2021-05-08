@@ -5,7 +5,9 @@ import java.nio.file.*;
 
 public class Main {
     /**
-     * Склеивание содержимого дерево файлов в один файл в алфавитном порядке
+     * Класс для обхода дерева файлов и
+     * склейки содержащихся в нём файлов в один
+     * в алфавитном порядке следования их имён
      */
     public static void main(String[] args) {
         // директория, в которой надо искать файлы
@@ -19,8 +21,12 @@ public class Main {
             ex.printStackTrace();
         }
 
+        // cортировка по имени самих файлов
+        fileVisitor.sortPaths();
+
         // директория, в которой будет находится склеенный файл
         Path destinationFile = Paths.get("./folders/destination/summary.txt");
+        //destinationFile.getName().toString()
         // содержимое копируемого файла
         byte[] byteLines;
         // путь к копируемому файлу
