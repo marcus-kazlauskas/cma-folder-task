@@ -3,7 +3,7 @@ package com.company;
 import java.io.IOException;
 import java.nio.file.*;
 
-public class Main {
+public class FileWalker {
     /**
      * Класс для обхода дерева файлов и
      * склейки содержащихся в нём файлов в один
